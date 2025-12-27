@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['mantissify_5fconvert_5fstring_0',['MANTISSIFY_convert_string',['../group__mantissify__functions.html#ga92c28b44c73ded66114d83edf1c2385a',1,'MANTISSIFY_convert_string(const char *input, char *buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip):&#160;mantissify.c'],['../group__mantissify__functions.html#ga92c28b44c73ded66114d83edf1c2385a',1,'MANTISSIFY_convert_string(const char *input, char *buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip):&#160;mantissify.c']]],
+  ['mantissify_5fformat_5fvalue_1',['MANTISSIFY_format_value',['../group__mantissify__functions.html#ga67bb3026f5609e2668d3ba6e91a9bdfc',1,'MANTISSIFY_format_value(double f, char *buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip):&#160;mantissify.c'],['../group__mantissify__functions.html#ga67bb3026f5609e2668d3ba6e91a9bdfc',1,'MANTISSIFY_format_value(double f, char *buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip):&#160;mantissify.c']]]
+];
