@@ -1,4 +1,4 @@
-# Mantissify - format measurement values onto si-prefixes
+# Mantissify - Smart SI scaling for your measurements
 
 Mantissify is a lightweight API that converts numbers, measurements, and
 entire texts containing measurement data into clear, human‑readable formats.  

@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "mantissify C API", "index.html", [
+  [ "Mantissify C API", "index.html", [
     [ "Topics", "topics.html", "topics" ]
   ] ]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mantissify_20c_20api_0',['mantissify C API',['../index.html',1,'']]],
+  ['mantissify_20c_20api_0',['Mantissify C API',['../index.html',1,'']]],
   ['mantissify_5fconvert_5ftext_1',['MANTISSIFY_convert_text',['../group__mantissify__functions.html#ga89463bfa987daa9e9e04cb2c9e340878',1,'MANTISSIFY_convert_text(const char *input, char *buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip):&#160;mantissify.c'],['../group__mantissify__functions.html#ga89463bfa987daa9e9e04cb2c9e340878',1,'MANTISSIFY_convert_text(const char *input, char *buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip):&#160;mantissify.c']]],
   ['mantissify_5ferrcode_5fbuffersize_2',['MANTISSIFY_ERRCODE_BUFFERSIZE',['../group__mantissify__definitions.html#ga9cfae2af357a2110d204f193351b7538',1,'mantissify.h']]],
   ['mantissify_5ferrcode_5fgeneral_3',['MANTISSIFY_ERRCODE_GENERAL',['../group__mantissify__definitions.html#ga46cd544c2cd426e6fb9578e7b355036d',1,'mantissify.h']]],
