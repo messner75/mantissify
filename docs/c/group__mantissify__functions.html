@@ -141,6 +141,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Formats measurement values within a given text into human friendly format. </p>
+<p>Note that the function uses strtod from the C standard library, therefore the parser decimal point char depend on your locale setting.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">input</td><td>The text to convert as pointer to a const c-string </td></tr>
@@ -152,7 +153,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of written bytes (excluding the c-string zero termination) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of written bytes (excluding the c-string zero termination), also when writing virtual. </dd></dl>
 
 </div>
 </div>
@@ -196,6 +197,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Formats a given measurement value into human friendly format. </p>
+<p>Note that the function uses snprintf from the C standard library, therefore the printed decimal point char my depend on your locale setting.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">f</td><td>The measurement value to format </td></tr>
@@ -207,7 +209,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of written bytes (excluding the c-string zero termination) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of written bytes (excluding the c-string zero termination), also when writing virtual. </dd></dl>
 
 </div>
 </div>
