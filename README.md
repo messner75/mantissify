@@ -5,6 +5,9 @@ entire texts containing measurement data into clear, human‑readable formats.
 It helps make technical or scientific information easier to understand and
 more consistent.
 
+Visit the mantissify product page on GitHub for more informations: <br>
+https://messner75.github.io/mantissify
+
 ## Features
 - Formats individual measurement values  
 - Detects and reformats measurement data inside full text  
