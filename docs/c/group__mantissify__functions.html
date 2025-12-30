@@ -96,19 +96,19 @@ $(function(){initNavTree('group__mantissify__functions.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:ga67bb3026f5609e2668d3ba6e91a9bdfc" id="r_ga67bb3026f5609e2668d3ba6e91a9bdfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67bb3026f5609e2668d3ba6e91a9bdfc">MANTISSIFY_format_value</a> (double f, char *buffer, size_t bufferLength, int fracs, <a class="el" href="group__mantissify__definitions.html#ga57a82091445f9c6278b4929ed6387398">MANTISSIFY_MAG_t</a> mag, <a class="el" href="group__mantissify__definitions.html#gaea95c0847d8f0610993995d33125c28d">MANTISSIFY_SIP_t</a> sip)</td></tr>
 <tr class="memdesc:ga67bb3026f5609e2668d3ba6e91a9bdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a given measurement value into human friendly format.  <br /></td></tr>
-<tr class="memitem:ga92c28b44c73ded66114d83edf1c2385a" id="r_ga92c28b44c73ded66114d83edf1c2385a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga92c28b44c73ded66114d83edf1c2385a">MANTISSIFY_convert_string</a> (const char *input, char *buffer, size_t bufferLength, int fracs, <a class="el" href="group__mantissify__definitions.html#ga57a82091445f9c6278b4929ed6387398">MANTISSIFY_MAG_t</a> mag, <a class="el" href="group__mantissify__definitions.html#gaea95c0847d8f0610993995d33125c28d">MANTISSIFY_SIP_t</a> sip)</td></tr>
-<tr class="memdesc:ga92c28b44c73ded66114d83edf1c2385a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats measurement values within a given text into human friendly format.  <br /></td></tr>
+<tr class="memitem:ga89463bfa987daa9e9e04cb2c9e340878" id="r_ga89463bfa987daa9e9e04cb2c9e340878"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga89463bfa987daa9e9e04cb2c9e340878">MANTISSIFY_convert_text</a> (const char *input, char *buffer, size_t bufferLength, int fracs, <a class="el" href="group__mantissify__definitions.html#ga57a82091445f9c6278b4929ed6387398">MANTISSIFY_MAG_t</a> mag, <a class="el" href="group__mantissify__definitions.html#gaea95c0847d8f0610993995d33125c28d">MANTISSIFY_SIP_t</a> sip)</td></tr>
+<tr class="memdesc:ga89463bfa987daa9e9e04cb2c9e340878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats all measurement values within a given text into human friendly format.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ga92c28b44c73ded66114d83edf1c2385a" name="ga92c28b44c73ded66114d83edf1c2385a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga92c28b44c73ded66114d83edf1c2385a">&#9670;&#160;</a></span>MANTISSIFY_convert_string()</h2>
+<a id="ga89463bfa987daa9e9e04cb2c9e340878" name="ga89463bfa987daa9e9e04cb2c9e340878"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga89463bfa987daa9e9e04cb2c9e340878">&#9670;&#160;</a></span>MANTISSIFY_convert_text()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int MANTISSIFY_convert_string </td>
+          <td class="memname">int MANTISSIFY_convert_text </td>
           <td>(</td>
           <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
         </tr>
@@ -140,7 +140,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Formats measurement values within a given text into human friendly format. </p>
+<p>Formats all measurement values within a given text into human friendly format. </p>
 <p>Note that the function uses strtod from the C standard library, therefore the parser decimal point char depend on your locale setting.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

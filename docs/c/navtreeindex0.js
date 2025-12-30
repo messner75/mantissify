@@ -22,7 +22,7 @@ var NAVTREEINDEX0 =
 "group__mantissify__definitions.html#ggaea95c0847d8f0610993995d33125c28daf20358bfefad73873cf2922dc9e0ef22":[0,0,5,6],
 "group__mantissify__functions.html":[0,1],
 "group__mantissify__functions.html#ga67bb3026f5609e2668d3ba6e91a9bdfc":[0,1,1],
-"group__mantissify__functions.html#ga92c28b44c73ded66114d83edf1c2385a":[0,1,0],
+"group__mantissify__functions.html#ga89463bfa987daa9e9e04cb2c9e340878":[0,1,0],
 "index.html":[],
 "pages.html":[],
 "topics.html":[0]
