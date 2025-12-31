@@ -2,13 +2,12 @@
  * @file mantissify.c
  * @brief Implementation of the mantissify C API.
  *
- * @version 1.0.0
- * @date 2025-12-30
+ * @version 1.1.0
+ * @date 2025-12-31
  * @author Martin Messner
  *
  * @copyright (c) 2025 Martin Messner / messner75 <br>
- *  This project is licensed unter CC BY-ND 4.0 <br>
- *  View the complete LICENSE file at https://github.com/messner75/mantissify 
+ *            SPDX-License-Identifier: MIT
  *
  * Additional disclaimer: <br>
  * This software is provided "as is", without warranty of any kind, express or implied,

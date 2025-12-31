@@ -11,24 +11,17 @@
  * 
  * The mantissify C API functions work stateless and are thread-safe.
  *
- * Visit the mantissify product page on GitHub for more informations: <br>
- * https://messner75.github.io/mantissify
- *
- * @version 1.0.0
- * @date 2025-12-30
+ * GitHub pages for product information and demonstration: <br>
+ * https://messner75.github.io/mantissify <br>
+ * GitHub source code repository: <br>
+ * https://github.com/messner75/mantissify
+ * 
+ * @version 1.1.0
+ * @date 2025-12-31
  * @author Martin Messner
  * 
  * @copyright (c) 2025 Martin Messner / messner75 <br>
- *  This project is licensed unter CC BY-ND 4.0 <br>
- *  View the complete LICENSE file at https://github.com/messner75/mantissify
- * 
- * Additional disclaimer: <br>
- * This software is provided "as is", without warranty of any kind, express or implied,
- * including but not limited to the warranties of merchantability, fitness for a
- * particular purpose and noninfringement. In no event shall the author(s) be liable
- * for any claim, damages or other liability, whether in an action of contract, tort
- * or otherwise, arising from, out of or in connection with the software or the use
- * or other dealings in the software.
+ *            SPDX-License-Identifier: MIT
  */
 
 #ifndef MESSNER75_MANTISSIFY_H
