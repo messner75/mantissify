@@ -23,6 +23,6 @@ The sensor measured 0.000345678 A at 3213 V.
 The sensor measured 345.678 micro A at 3.313 kilo V.
 
 ## License
-To keep it simple, mantissify uses the MIT licensing model.
-See the `LICENSE` file for details.
+To keep it simple, mantissify uses the MIT licensing model. <br>
+See the `LICENSE` file for details. <br>
 SPDX-License-Identifier: MIT
