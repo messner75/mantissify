@@ -16,11 +16,11 @@
  * GitHub source code repository: <br>
  * https://github.com/messner75/mantissify
  * 
- * @version 1.1.0
- * @date 2025-12-31
+ * @version 1.2.0
+ * @date 2026-01-01
  * @author Martin Messner
  * 
- * @copyright (c) 2025 Martin Messner / messner75 <br>
+ * @copyright (c) 2026 Martin Messner / messner75 <br>
  *            SPDX-License-Identifier: MIT
  */
 
@@ -68,6 +68,16 @@ typedef enum
 #define MANTISSIFY_ERRCODE_BUFFERSIZE -3 ///< A given buffer size was not sufficient
 #define MANTISSIFY_ERRCODE_VALUERANGE -4 ///< Given measurement value range is not supported
 
+/**
+* @brief Mantissify formatting options
+*/
+typedef struct
+{
+  int fracs; ///< number of fractional digits to display
+  MANTISSIFY_MAG_t mag; ///< magnitude formatting option
+  MANTISSIFY_SIP_t sip; ///< SI-Prefix formatting option
+} MANTISSIFY_OPT_t;
+
 /** @} */ // end of mantissify_definitions
 
 /**
@@ -82,15 +92,13 @@ typedef enum
 * therefore the printed decimal point char my depend on your locale setting.
 * 
 * @param f The measurement value to format
-* @param buffer Pointer to a buffer for the formatted result text. Pass NULL to make a 'virtual' write (like snprintf).
-* @param bufferLength Length (number of bytes) of the given buffer
-* @param fracs Number of desired fractional digits [0 .. 9]
-* @param mag The magnitude formatting option, one of MANTISSIFY_MAG_t
-* @param sip The SI-Prefix formatting option, one of MANTISSIFY_SIP_t
+* @param buf Pointer to a buffer for the formatted result text. Pass NULL to make a 'virtual' write (like snprintf).
+* @param len Length (number of bytes) of the given buffer
+* @param opt Pointer to const struct with formatting options
 * 
 * @return The number of written bytes (excluding the c-string zero termination), also when writing virtual.
 */
-int MANTISSIFY_format_value(double f, char* buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip);
+int MANTISSIFY_value(double val, char* buf, const size_t len, const MANTISSIFY_OPT_t* opt);
 
 /**
 * @brief Formats all measurement values within a given text into human friendly format
@@ -98,16 +106,14 @@ int MANTISSIFY_format_value(double f, char* buffer, size_t bufferLength, int fra
 * Note that the function uses strtod from the C standard library,
 * therefore the parser decimal point char depend on your locale setting.
 * 
-* @param input The text to convert as pointer to a const c-string
-* @param buffer Pointer to a buffer for the formatted result text. Pass NULL to make a 'virtual' write (like snprintf).
-* @param bufferLength Length (number of bytes) of the given buffer
-* @param fracs Number of desired fractional digits [0 .. 9]
-* @param mag The magnitude formatting option, one of MANTISSIFY_MAG_t
-* @param sip The SI-Prefix formatting option, one of MANTISSIFY_SIP_t
+* @param txt The text to convert as pointer to a const c-string
+* @param buf Pointer to a buffer for the formatted result text. Pass NULL to make a 'virtual' write (like snprintf).
+* @param len Length (number of bytes) of the given buffer
+* @param opt Pointer to const struct with formatting options
 *
 * @return The number of written bytes (excluding the c-string zero termination), also when writing virtual.
 */
-int MANTISSIFY_convert_text(const char* input, char* buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip);
+int MANTISSIFY_text(const char* txt, char* buf, const size_t len, const MANTISSIFY_OPT_t* opt);
 
 /** @} */ // end of mantissify_functions
 

@@ -2,11 +2,11 @@
  * @file mantissify.c
  * @brief Implementation of the mantissify C API.
  *
- * @version 1.1.0
- * @date 2025-12-31
+ * @version 1.2.0
+ * @date 2026-01-01
  * @author Martin Messner
  *
- * @copyright (c) 2025 Martin Messner / messner75 <br>
+ * @copyright (c) 2026 Martin Messner / messner75 <br>
  *            SPDX-License-Identifier: MIT
  *
  * Additional disclaimer: <br>
@@ -87,12 +87,8 @@ static inline int _shift_exponent_from_zero(double* f)
 }
 
 // note outEnd > outStart if a number was found. outEnd points to char behind the number
-static double _find_next_number(const char *szString, const char* *outStart, const char* *outEnd)
+static double _find_next_number(const char *szString, const char* *outStart, const char* *outEnd, const char decPoint)
 {
-  // determine the decimmal point character of the users actual locale setting
-  struct lconv* lc = localeconv();
-  const char decPoint = (lc && lc->decimal_point) ? lc->decimal_point[0] : '.';
-
   // pre-init values as 'nothing found'
   const char* p = *outStart = *outEnd = szString;
   const char* todEndPtr;
@@ -123,61 +119,65 @@ static inline void _append_and_terminate(char* buffer, int* bufferIndex, const c
   if (buffer) buffer[*bufferIndex] = 0; // place zero termination
 }
 
-int MANTISSIFY_format_value(double f, char* buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip)
+int MANTISSIFY_value(double val, char* buf, const size_t len, const MANTISSIFY_OPT_t* opt)
 {
   // parameter check with early returns in case of error ('buffer' can be NULL for 'virtual write')
-  if (fracs < 0 || fracs > 9) return MANTISSIFY_ERRCODE_PARAMETER;
-  if (mag < 0 || mag > 5) return MANTISSIFY_ERRCODE_PARAMETER;
-  if (sip < 0 || sip > 6) return MANTISSIFY_ERRCODE_PARAMETER;
+  if (opt->fracs < 0 || opt->fracs > 9) return MANTISSIFY_ERRCODE_PARAMETER;
+  if (opt->mag < 0 || opt->mag > 5) return MANTISSIFY_ERRCODE_PARAMETER;
+  if (opt->sip < 0 || opt->sip > 6) return MANTISSIFY_ERRCODE_PARAMETER;
 
   // try to split value in new value with extracted si-prefix
-  int e = _shift_exponent_from_zero(&f);
+  int e = _shift_exponent_from_zero(&val);
   if ((e < -30) || (e > 30) || (e % 3 != 0)) return MANTISSIFY_ERRCODE_VALUERANGE;
 
   // choose a si prefix string corresponding to exp option
-  const char* siPrefix = (e > 0) ? _sipPosArrays[sip][e / 3] : _sipNegArrays[sip][-e / 3];
+  const char* siPrefix = (e > 0) ? _sipPosArrays[opt->sip][e / 3] : _sipNegArrays[opt->sip][-e / 3];
 
   // choose a format string depending on selected mag option and fracs
-  const char* format = _magFormatArrays[mag][fracs];
+  const char* format = _magFormatArrays[opt->mag][opt->fracs];
 
-  return snprintf(buffer, bufferLength, format, f, siPrefix); // could also used to test how many bytes are required
+  return snprintf(buf, len, format, val, siPrefix); // could also used to test how many bytes are required
 }
 
-int MANTISSIFY_convert_text(const char* input, char* buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip)
+int MANTISSIFY_text(const char* txt, char* buf, const size_t len, const MANTISSIFY_OPT_t* opt)
 {
   // parameter check with early returns in case of error ('buffer' can be NULL for 'virtual write')
-  if (NULL == input) return MANTISSIFY_ERRCODE_PARAMETER;
+  if (NULL == txt) return MANTISSIFY_ERRCODE_PARAMETER;
   
-  if (fracs < 0 || fracs > 9) return MANTISSIFY_ERRCODE_PARAMETER;
-  if (mag < 0 || mag > 5) return MANTISSIFY_ERRCODE_PARAMETER;
-  if (sip < 0 || sip > 6) return MANTISSIFY_ERRCODE_PARAMETER;
+  if (opt->fracs < 0 || opt->fracs > 9) return MANTISSIFY_ERRCODE_PARAMETER;
+  if (opt->mag < 0 || opt->mag > 5) return MANTISSIFY_ERRCODE_PARAMETER;
+  if (opt->sip < 0 || opt->sip > 6) return MANTISSIFY_ERRCODE_PARAMETER;
+
+  // determine the decimmal point character of the users actual locale setting
+  struct lconv* lc = localeconv();
+  const char decPoint = (lc && lc->decimal_point) ? lc->decimal_point[0] : '.';
 
   char temp[32] = { 0 }; // temp char for formatting numbers: +123.123456789_u, +123.123456789e-99
-  const char *inPosition = input, *outStart = 0, *outEnd = 0;
+  const char *inPosition = txt, *outStart = 0, *outEnd = 0;
   int bufferIndex = 0;
-  if (buffer) buffer[bufferIndex] = 0; // start with zero termination
+  if (buf) buf[bufferIndex] = 0; // start with zero termination
 
   while (1)
   {
-    const double f = _find_next_number(inPosition, &outStart, &outEnd);
+    const double val = _find_next_number(inPosition, &outStart, &outEnd, decPoint);
     if (outEnd > outStart)
     {
       const int lenPreText = (int)(outStart - inPosition);
-      if (buffer && (lenPreText >= (bufferLength - bufferIndex))) return MANTISSIFY_ERRCODE_BUFFERSIZE;
-      _append_and_terminate(buffer, &bufferIndex, inPosition, lenPreText);
+      if (buf && (lenPreText >= (len - bufferIndex))) return MANTISSIFY_ERRCODE_BUFFERSIZE;
+      _append_and_terminate(buf, &bufferIndex, inPosition, lenPreText);
       
-      const int lenNumber = MANTISSIFY_format_value(f, temp, sizeof(temp), fracs, mag, sip);
+      const int lenNumber = MANTISSIFY_value(val, temp, sizeof(temp), opt);
       if (lenNumber > 0)
       {
-        if (buffer && (lenNumber >= (bufferLength - bufferIndex))) return MANTISSIFY_ERRCODE_BUFFERSIZE;
-        _append_and_terminate(buffer, &bufferIndex, temp, lenNumber);
+        if (buf && (lenNumber >= (len - bufferIndex))) return MANTISSIFY_ERRCODE_BUFFERSIZE;
+        _append_and_terminate(buf, &bufferIndex, temp, lenNumber);
       }
       else
       {
         // number formatting was not possible, so we append the original string instead
         const int lenOriginal = (int)(outEnd - outStart);
-        if (buffer && (lenOriginal >= (bufferLength - bufferIndex))) return MANTISSIFY_ERRCODE_BUFFERSIZE;
-        _append_and_terminate(buffer, &bufferIndex, outStart, lenOriginal);
+        if (buf && (lenOriginal >= (len - bufferIndex))) return MANTISSIFY_ERRCODE_BUFFERSIZE;
+        _append_and_terminate(buf, &bufferIndex, outStart, lenOriginal);
       }
 
       inPosition = outEnd; // continue with next number (char after current number)
@@ -186,9 +186,9 @@ int MANTISSIFY_convert_text(const char* input, char* buffer, size_t bufferLength
     {
       // no more number found, just copy remaining chars to output and break
       const int lenFinalText = (int)strlen(inPosition); 
-      if (buffer && (lenFinalText >= (bufferLength - bufferIndex))) return MANTISSIFY_ERRCODE_BUFFERSIZE;
+      if (buf && (lenFinalText >= (len - bufferIndex))) return MANTISSIFY_ERRCODE_BUFFERSIZE;
       
-      _append_and_terminate(buffer, &bufferIndex, inPosition, lenFinalText);
+      _append_and_terminate(buf, &bufferIndex, inPosition, lenFinalText);
       break; // no more text to parse
     }
   }

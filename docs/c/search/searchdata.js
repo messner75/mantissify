@@ -1,30 +1,36 @@
 var indexSectionsWithContent =
 {
-  0: "acdfm",
+  0: "acdfms",
   1: "m",
   2: "m",
-  3: "m",
-  4: "df",
-  5: "acm"
+  3: "fms",
+  4: "m",
+  5: "m",
+  6: "df",
+  7: "acm"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "functions",
-  2: "enums",
-  3: "enumvalues",
-  4: "groups",
-  5: "pages"
+  1: "classes",
+  2: "functions",
+  3: "variables",
+  4: "enums",
+  5: "enumvalues",
+  6: "groups",
+  7: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Functions",
-  2: "Enumerations",
-  3: "Enumerator",
-  4: "Modules",
-  5: "Pages"
+  1: "Data Structures",
+  2: "Functions",
+  3: "Variables",
+  4: "Enumerations",
+  5: "Enumerator",
+  6: "Modules",
+  7: "Pages"
 };
 

@@ -94,48 +94,38 @@ $(function(){initNavTree('group__mantissify__functions.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga67bb3026f5609e2668d3ba6e91a9bdfc" id="r_ga67bb3026f5609e2668d3ba6e91a9bdfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67bb3026f5609e2668d3ba6e91a9bdfc">MANTISSIFY_format_value</a> (double f, char *buffer, size_t bufferLength, int fracs, <a class="el" href="group__mantissify__definitions.html#ga57a82091445f9c6278b4929ed6387398">MANTISSIFY_MAG_t</a> mag, <a class="el" href="group__mantissify__definitions.html#gaea95c0847d8f0610993995d33125c28d">MANTISSIFY_SIP_t</a> sip)</td></tr>
-<tr class="memdesc:ga67bb3026f5609e2668d3ba6e91a9bdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a given measurement value into human friendly format.  <br /></td></tr>
-<tr class="memitem:ga89463bfa987daa9e9e04cb2c9e340878" id="r_ga89463bfa987daa9e9e04cb2c9e340878"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga89463bfa987daa9e9e04cb2c9e340878">MANTISSIFY_convert_text</a> (const char *input, char *buffer, size_t bufferLength, int fracs, <a class="el" href="group__mantissify__definitions.html#ga57a82091445f9c6278b4929ed6387398">MANTISSIFY_MAG_t</a> mag, <a class="el" href="group__mantissify__definitions.html#gaea95c0847d8f0610993995d33125c28d">MANTISSIFY_SIP_t</a> sip)</td></tr>
-<tr class="memdesc:ga89463bfa987daa9e9e04cb2c9e340878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats all measurement values within a given text into human friendly format.  <br /></td></tr>
+<tr class="memitem:ga055ce7706b4c7033d339301c366af7db" id="r_ga055ce7706b4c7033d339301c366af7db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga055ce7706b4c7033d339301c366af7db">MANTISSIFY_value</a> (double val, char *buf, const size_t len, const <a class="el" href="struct_m_a_n_t_i_s_s_i_f_y___o_p_t__t.html">MANTISSIFY_OPT_t</a> *opt)</td></tr>
+<tr class="memdesc:ga055ce7706b4c7033d339301c366af7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a given measurement value into human friendly format.  <br /></td></tr>
+<tr class="memitem:ga6b8c6b22cf43507c59c1ceee1425273b" id="r_ga6b8c6b22cf43507c59c1ceee1425273b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6b8c6b22cf43507c59c1ceee1425273b">MANTISSIFY_text</a> (const char *txt, char *buf, const size_t len, const <a class="el" href="struct_m_a_n_t_i_s_s_i_f_y___o_p_t__t.html">MANTISSIFY_OPT_t</a> *opt)</td></tr>
+<tr class="memdesc:ga6b8c6b22cf43507c59c1ceee1425273b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats all measurement values within a given text into human friendly format.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ga89463bfa987daa9e9e04cb2c9e340878" name="ga89463bfa987daa9e9e04cb2c9e340878"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga89463bfa987daa9e9e04cb2c9e340878">&#9670;&#160;</a></span>MANTISSIFY_convert_text()</h2>
+<a id="ga6b8c6b22cf43507c59c1ceee1425273b" name="ga6b8c6b22cf43507c59c1ceee1425273b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b8c6b22cf43507c59c1ceee1425273b">&#9670;&#160;</a></span>MANTISSIFY_text()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int MANTISSIFY_convert_text </td>
+          <td class="memname">int MANTISSIFY_text </td>
           <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>txt</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>bufferLength</em></span>, </td>
+          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fracs</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__mantissify__definitions.html#ga57a82091445f9c6278b4929ed6387398">MANTISSIFY_MAG_t</a></td>          <td class="paramname"><span class="paramname"><em>mag</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__mantissify__definitions.html#gaea95c0847d8f0610993995d33125c28d">MANTISSIFY_SIP_t</a></td>          <td class="paramname"><span class="paramname"><em>sip</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="struct_m_a_n_t_i_s_s_i_f_y___o_p_t__t.html">MANTISSIFY_OPT_t</a> *</td>          <td class="paramname"><span class="paramname"><em>opt</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -144,12 +134,10 @@ Functions</h2></td></tr>
 <p>Note that the function uses strtod from the C standard library, therefore the parser decimal point char depend on your locale setting.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input</td><td>The text to convert as pointer to a const c-string </td></tr>
-    <tr><td class="paramname">buffer</td><td>Pointer to a buffer for the formatted result text. Pass NULL to make a 'virtual' write (like snprintf). </td></tr>
-    <tr><td class="paramname">bufferLength</td><td>Length (number of bytes) of the given buffer </td></tr>
-    <tr><td class="paramname">fracs</td><td>Number of desired fractional digits [0 .. 9] </td></tr>
-    <tr><td class="paramname">mag</td><td>The magnitude formatting option, one of <a class="el" href="group__mantissify__definitions.html#ga57a82091445f9c6278b4929ed6387398" title="Magnitude formatting options.">MANTISSIFY_MAG_t</a> </td></tr>
-    <tr><td class="paramname">sip</td><td>The SI-Prefix formatting option, one of <a class="el" href="group__mantissify__definitions.html#gaea95c0847d8f0610993995d33125c28d" title="SI-Prefix formatting options.">MANTISSIFY_SIP_t</a></td></tr>
+    <tr><td class="paramname">txt</td><td>The text to convert as pointer to a const c-string </td></tr>
+    <tr><td class="paramname">buf</td><td>Pointer to a buffer for the formatted result text. Pass NULL to make a 'virtual' write (like snprintf). </td></tr>
+    <tr><td class="paramname">len</td><td>Length (number of bytes) of the given buffer </td></tr>
+    <tr><td class="paramname">opt</td><td>Pointer to const struct with formatting options</td></tr>
   </table>
   </dd>
 </dl>
@@ -157,41 +145,31 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga67bb3026f5609e2668d3ba6e91a9bdfc" name="ga67bb3026f5609e2668d3ba6e91a9bdfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga67bb3026f5609e2668d3ba6e91a9bdfc">&#9670;&#160;</a></span>MANTISSIFY_format_value()</h2>
+<a id="ga055ce7706b4c7033d339301c366af7db" name="ga055ce7706b4c7033d339301c366af7db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga055ce7706b4c7033d339301c366af7db">&#9670;&#160;</a></span>MANTISSIFY_value()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int MANTISSIFY_format_value </td>
+          <td class="memname">int MANTISSIFY_value </td>
           <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>bufferLength</em></span>, </td>
+          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fracs</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__mantissify__definitions.html#ga57a82091445f9c6278b4929ed6387398">MANTISSIFY_MAG_t</a></td>          <td class="paramname"><span class="paramname"><em>mag</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__mantissify__definitions.html#gaea95c0847d8f0610993995d33125c28d">MANTISSIFY_SIP_t</a></td>          <td class="paramname"><span class="paramname"><em>sip</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="struct_m_a_n_t_i_s_s_i_f_y___o_p_t__t.html">MANTISSIFY_OPT_t</a> *</td>          <td class="paramname"><span class="paramname"><em>opt</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -201,11 +179,9 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">f</td><td>The measurement value to format </td></tr>
-    <tr><td class="paramname">buffer</td><td>Pointer to a buffer for the formatted result text. Pass NULL to make a 'virtual' write (like snprintf). </td></tr>
-    <tr><td class="paramname">bufferLength</td><td>Length (number of bytes) of the given buffer </td></tr>
-    <tr><td class="paramname">fracs</td><td>Number of desired fractional digits [0 .. 9] </td></tr>
-    <tr><td class="paramname">mag</td><td>The magnitude formatting option, one of <a class="el" href="group__mantissify__definitions.html#ga57a82091445f9c6278b4929ed6387398" title="Magnitude formatting options.">MANTISSIFY_MAG_t</a> </td></tr>
-    <tr><td class="paramname">sip</td><td>The SI-Prefix formatting option, one of <a class="el" href="group__mantissify__definitions.html#gaea95c0847d8f0610993995d33125c28d" title="SI-Prefix formatting options.">MANTISSIFY_SIP_t</a></td></tr>
+    <tr><td class="paramname">buf</td><td>Pointer to a buffer for the formatted result text. Pass NULL to make a 'virtual' write (like snprintf). </td></tr>
+    <tr><td class="paramname">len</td><td>Length (number of bytes) of the given buffer </td></tr>
+    <tr><td class="paramname">opt</td><td>Pointer to const struct with formatting options</td></tr>
   </table>
   </dd>
 </dl>
