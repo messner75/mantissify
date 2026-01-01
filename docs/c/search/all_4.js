@@ -1,12 +1,12 @@
 var searchData=
 [
   ['mantissify_20c_20api_0',['Mantissify C API',['../index.html',1,'']]],
-  ['mantissify_5fconvert_5ftext_1',['MANTISSIFY_convert_text',['../group__mantissify__functions.html#ga89463bfa987daa9e9e04cb2c9e340878',1,'MANTISSIFY_convert_text(const char *input, char *buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip):&#160;mantissify.c'],['../group__mantissify__functions.html#ga89463bfa987daa9e9e04cb2c9e340878',1,'MANTISSIFY_convert_text(const char *input, char *buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip):&#160;mantissify.c']]],
+  ['mantissify_5fconvert_5ftext_1',['MANTISSIFY_convert_text',['../group__mantissify__functions.html#ga89463bfa987daa9e9e04cb2c9e340878',1,'mantissify.h']]],
   ['mantissify_5ferrcode_5fbuffersize_2',['MANTISSIFY_ERRCODE_BUFFERSIZE',['../group__mantissify__definitions.html#ga9cfae2af357a2110d204f193351b7538',1,'mantissify.h']]],
   ['mantissify_5ferrcode_5fgeneral_3',['MANTISSIFY_ERRCODE_GENERAL',['../group__mantissify__definitions.html#ga46cd544c2cd426e6fb9578e7b355036d',1,'mantissify.h']]],
   ['mantissify_5ferrcode_5fparameter_4',['MANTISSIFY_ERRCODE_PARAMETER',['../group__mantissify__definitions.html#ga313cb22adc66363f892ded62011787c4',1,'mantissify.h']]],
   ['mantissify_5ferrcode_5fvaluerange_5',['MANTISSIFY_ERRCODE_VALUERANGE',['../group__mantissify__definitions.html#ga09344b95874d77b3ab158b14caab7f0c',1,'mantissify.h']]],
-  ['mantissify_5fformat_5fvalue_6',['MANTISSIFY_format_value',['../group__mantissify__functions.html#ga67bb3026f5609e2668d3ba6e91a9bdfc',1,'MANTISSIFY_format_value(double f, char *buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip):&#160;mantissify.c'],['../group__mantissify__functions.html#ga67bb3026f5609e2668d3ba6e91a9bdfc',1,'MANTISSIFY_format_value(double f, char *buffer, size_t bufferLength, int fracs, MANTISSIFY_MAG_t mag, MANTISSIFY_SIP_t sip):&#160;mantissify.c']]],
+  ['mantissify_5fformat_5fvalue_6',['MANTISSIFY_format_value',['../group__mantissify__functions.html#ga67bb3026f5609e2668d3ba6e91a9bdfc',1,'mantissify.h']]],
   ['mantissify_5fmag_5ffix_5fspace_7',['MANTISSIFY_MAG_FIX_SPACE',['../group__mantissify__definitions.html#gga57a82091445f9c6278b4929ed6387398aae2d1e1fab8e7e5a2cf9b6fef1ea3641',1,'mantissify.h']]],
   ['mantissify_5fmag_5ffix_5fspace_5fsign_8',['MANTISSIFY_MAG_FIX_SPACE_SIGN',['../group__mantissify__definitions.html#gga57a82091445f9c6278b4929ed6387398a6e91ac7e8027f781e926d84176757036',1,'mantissify.h']]],
   ['mantissify_5fmag_5ffix_5fzero_9',['MANTISSIFY_MAG_FIX_ZERO',['../group__mantissify__definitions.html#gga57a82091445f9c6278b4929ed6387398ad200e84628df1d28a9e7300cb4a1c7df',1,'mantissify.h']]],
