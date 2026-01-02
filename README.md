@@ -13,6 +13,7 @@ https://messner75.github.io/mantissify
 - Detects and reformats measurement data inside full text  
 - Supports various SI prefixes and scientific notation  
 - Produces clean, readable output for users and documentation
+- API is stateless and threadsafe
 
 ## Example
 
