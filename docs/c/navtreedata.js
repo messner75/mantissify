@@ -25,21 +25,13 @@
 var NAVTREE =
 [
   [ "Mantissify C API", "index.html", [
-    [ "Topics", "topics.html", "topics" ],
-    [ "Data Structures", "annotated.html", [
-      [ "Data Structures", "annotated.html", "annotated_dup" ],
-      [ "Data Structure Index", "classes.html", null ],
-      [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
-    ] ]
+    [ "API", "topics.html", "topics" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"group__mantissify__definitions.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -1,10 +1,9 @@
 var NAVTREEINDEX0 =
 {
-"annotated.html":[1,0],
-"classes.html":[1,1],
-"functions.html":[1,2,0],
-"functions_vars.html":[1,2,1],
 "group__mantissify__definitions.html":[0,0],
+"group__mantissify__definitions.html#a1fcf7a05d5683d955bcc9c497ea26b87":[0,0,0,2],
+"group__mantissify__definitions.html#a547dde81c180b43ecc0690dde3b18d95":[0,0,0,0],
+"group__mantissify__definitions.html#a7d56b91afd03db6b9e89a91ef5bd6e62":[0,0,0,1],
 "group__mantissify__definitions.html#ga09344b95874d77b3ab158b14caab7f0c":[0,0,4],
 "group__mantissify__definitions.html#ga313cb22adc66363f892ded62011787c4":[0,0,3],
 "group__mantissify__definitions.html#ga46cd544c2cd426e6fb9578e7b355036d":[0,0,2],
@@ -24,14 +23,11 @@ var NAVTREEINDEX0 =
 "group__mantissify__definitions.html#ggaea95c0847d8f0610993995d33125c28dad4ee626a77bac1c44bcf1937f08a7e55":[0,0,6,4],
 "group__mantissify__definitions.html#ggaea95c0847d8f0610993995d33125c28daeee183b164527f96ca1b6e1b14ef1589":[0,0,6,2],
 "group__mantissify__definitions.html#ggaea95c0847d8f0610993995d33125c28daf20358bfefad73873cf2922dc9e0ef22":[0,0,6,6],
+"group__mantissify__definitions.html#struct_m_a_n_t_i_s_s_i_f_y___o_p_t__t":[0,0,0],
 "group__mantissify__functions.html":[0,1],
 "group__mantissify__functions.html#ga055ce7706b4c7033d339301c366af7db":[0,1,1],
 "group__mantissify__functions.html#ga6b8c6b22cf43507c59c1ceee1425273b":[0,1,0],
 "index.html":[],
 "pages.html":[],
-"struct_m_a_n_t_i_s_s_i_f_y___o_p_t__t.html":[0,0,0],
-"struct_m_a_n_t_i_s_s_i_f_y___o_p_t__t.html#a1fcf7a05d5683d955bcc9c497ea26b87":[0,0,0,2],
-"struct_m_a_n_t_i_s_s_i_f_y___o_p_t__t.html#a547dde81c180b43ecc0690dde3b18d95":[0,0,0,0],
-"struct_m_a_n_t_i_s_s_i_f_y___o_p_t__t.html#a7d56b91afd03db6b9e89a91ef5bd6e62":[0,0,0,1],
 "topics.html":[0]
 };
